@@ -1,7 +1,7 @@
 $(function() {
   $('article img').addClass('img-responsive');
   $('code').addClass('prettyprint');
-  $(article).each(function() {
+  $('article').each(function() {
     if($(this).find('img[alt="img-post-cover"]').length > 0) {
       var imgPostCover = $($(this).find('img[alt="img-post-cover"]')[0]);
       $(this).find('article-cover').attr('src', imgPostCover.attr('src'));
