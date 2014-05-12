@@ -1,0 +1,48 @@
+body {
+  background-image: url(../images/skulls.png);
+}
+
+.col-main, .col-right {
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.col-right {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.col-main {
+  padding-bottom: 5px;
+}
+
+.col-main > article {
+  padding-top: 5px;
+}
+
+.article-title {
+
+}
+
+.article-meta {
+  margin-top: -10px;
+}
+
+.article-content {
+  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.article-footer {
+  text-align: right;
+}
+
+.article-comment {
+  padding-top: 10px;
+}
+
+.twitter-share-button {
+  vertical-align: -5px;
+}

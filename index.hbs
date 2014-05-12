@@ -1,0 +1,26 @@
+{{!< default}}
+<section class="col-sm-8">
+  <div class="col-main">
+    {{#foreach posts}}
+      <article>
+        <a href="{{url}}"><h1 class="article-title">{{title}}</h1></a>
+        <p class="article-meta">Le {{date format="DD/MM/YYYY, à HH:mm"}} par {{author.name}}</p>
+        <img class="img-responsive" src="http://fakeimg.pl/710x160/282828/">
+        <div class="article-content">
+          {{content}}
+        </div>
+        <div class="article-footer">
+          <p>
+            <a href="{{url absolute="true"}}#isso-thread">commentaires</a>&nbsp;
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{url absolute="true"}}" data-text="{{title}}" data-via="jchampemont">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </p>
+        </div>
+      </article>
+      {{#unless @last}}
+        <hr>
+      {{/unless}}
+    {{/foreach}}
+  </div>
+  {{pagination}}
+</section>

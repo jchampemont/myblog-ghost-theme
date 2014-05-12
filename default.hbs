@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{meta_description}}" />
+    <title>{{meta_title}}</title>
+
+    <link href="{{asset "css/bootstrap.min.css"}}" rel="stylesheet">
+
+    <link href="{{asset "css/style.css"}}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {{ghost_head}}
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+            <span class="sr-only">Activer le menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Accueil</a></li>
+            <li class="active"><a href="{{@blog.url}}">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        {{{body}}}
+        {{> sidebar}}
+      </div>
+    </div>
+    {{ghost_foot}}
+    <script src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script src="{{asset "js/prettify/run_prettify.js"}}"></script>
+    <script src="{{asset "js/main.js"}}"></script>
+  </body>
+</html>
