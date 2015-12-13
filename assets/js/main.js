@@ -10,7 +10,7 @@ $(function() {
       $(this).find('article-cover').remove();
     }
   });
-  $.get("http://www.jeanchampemont.com/fr/blog-menu/", function(data) {
+  $.get("https://www.jeanchampemont.com/fr/blog-menu/", function(data) {
     $('.navbar').replaceWith(data);
   });
 });
