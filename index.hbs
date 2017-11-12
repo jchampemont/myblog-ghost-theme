@@ -5,8 +5,8 @@
       <article>
         <a href="{{url}}"><h1 class="article-title">{{title}}</h1></a>
         <p class="article-meta">Le {{date format="DD/MM/YYYY, à HH:mm"}} par {{author.name}}</p>
-        {{#if image}}
-          <img class="img-responsive article-cover" src="{{image}}">
+        {{#if feature_image}}
+          <img class="img-responsive article-cover" src="{{img_url feature_image}}">
         {{/if}}
         <div class="article-content">
           {{content}}
