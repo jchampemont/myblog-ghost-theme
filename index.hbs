@@ -13,9 +13,12 @@
         </div>
         <div class="article-footer">
           <p>
-            <a href="{{url absolute="true"}}#isso-thread">commentaires</a>&nbsp;
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{url absolute="true"}}" data-text="{{title}}" data-via="jchampemont">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="{{url absolute="true"}}#isso-thread">commentaires</a>
+            {{#if @blog.twitter}}
+              &nbsp;
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{url absolute="true"}}" data-text="{{title}}" data-via="{{@blog.twitter}}">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            {{/if}}
           </p>
         </div>
       </article>
@@ -26,4 +29,3 @@
   </div>
   {{pagination}}
 </section>
-<script data-isso="https://comments.jeanchampemont.com" src="https://comments.jeanchampemont.com/js/count.min.js"></script>

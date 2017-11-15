@@ -13,15 +13,16 @@
         </div>
         <div class="article-footer">
           <p>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{url absolute="true"}}" data-text="{{title}}" data-via="jchampemont">Tweet</a>
+            {{#if @blog.twitter}}
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{url absolute="true"}}" data-text="{{title}}" data-via="{{@blog.twitter}}">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            {{/if}}
           </p>
         </div>
       </article>
     {{/post}}
     <h3>Commentaires</h3>
     <div class="article-comment">
-      <script data-isso="https://comments.jeanchampemont.com" src="https://comments.jeanchampemont.com/js/embed.min.js"></script>
       <section id="isso-thread"></section>
     </div>
   </div>
